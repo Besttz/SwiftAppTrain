@@ -27,6 +27,16 @@ class ViewController: UIViewController {
     @IBAction func switchChanged(_ sender: UISwitch) {
         updateColor()
     }
+    @IBAction func reset(_ sender: Any) {
+        rSlider.value = 1
+        gSlider.value = 1
+        bSlider.value = 1
+        rSwitch.isOn = false
+        gSwitch.isOn = false
+        bSwitch.isOn = false
+        updateColor()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
