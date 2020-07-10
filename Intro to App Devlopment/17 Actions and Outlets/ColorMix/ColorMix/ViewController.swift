@@ -16,6 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var gSwitch: UISwitch!
     @IBOutlet weak var bSwitch: UISwitch!
     
+    @IBOutlet weak var rSlider: UISlider!
+    @IBOutlet weak var gSlider: UISlider!
+    @IBOutlet weak var bSlider: UISlider!
+    
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        updateColor()
+    }
+    
     @IBAction func switchChanged(_ sender: UISwitch) {
         updateColor()
     }
@@ -30,13 +38,13 @@ class ViewController: UIViewController {
         var green: CGFloat = 0
         var blue: CGFloat = 0
         if rSwitch.isOn {
-            red = 1
+            red = CGFloat(rSlider.value)
         }
         if gSwitch.isOn {
-            green = 1
+            green = CGFloat(gSlider.value)
         }
         if bSwitch.isOn {
-            blue = 1
+            blue = CGFloat(bSlider.value)
         }
         let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
         colorView.backgroundColor = color
