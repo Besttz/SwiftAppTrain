@@ -11,16 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     var lightOn = true
-    @IBOutlet weak var lightButton: UIButton!
+    
     
     fileprivate func UpdateUI() {
-        if lightOn {
-            view.backgroundColor = .white
-            lightButton.setTitle("Off", for: .normal)
-        } else {
-            view.backgroundColor = .black
-            lightButton.setTitle("On", for: .normal)
-        }
+        view.backgroundColor = lightOn ? .white : .black
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
