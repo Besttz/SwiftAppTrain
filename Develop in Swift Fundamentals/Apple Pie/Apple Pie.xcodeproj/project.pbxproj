@@ -26,6 +26,7 @@
 		656C043124D14609008736D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		656C043324D14609008736D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656C043924D15029008736D7 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		656C043B24D1626E008736D7 /* Pie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pie.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		656C042424D14608008736D7 /* Apple Pie */ = {
 			isa = PBXGroup;
 			children = (
+				656C043B24D1626E008736D7 /* Pie.entitlements */,
 				656C042524D14608008736D7 /* AppDelegate.swift */,
 				656C042724D14608008736D7 /* SceneDelegate.swift */,
 				656C042924D14608008736D7 /* ViewController.swift */,
@@ -288,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Apple Pie/Pie.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ANFCL46LUP;
 				INFOPLIST_FILE = "Apple Pie/Info.plist";
@@ -296,8 +299,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Besttz.Apple-Pie";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Besttz.pie;
 				PRODUCT_NAME = Pie;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Apple Pie/Pie.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ANFCL46LUP;
 				INFOPLIST_FILE = "Apple Pie/Info.plist";
@@ -315,8 +320,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Besttz.Apple-Pie";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Besttz.pie;
 				PRODUCT_NAME = Pie;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
