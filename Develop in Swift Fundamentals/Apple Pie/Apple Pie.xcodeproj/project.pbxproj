@@ -13,6 +13,7 @@
 		656C042D24D14608008736D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656C042B24D14608008736D7 /* Main.storyboard */; };
 		656C042F24D14609008736D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656C042E24D14609008736D7 /* Assets.xcassets */; };
 		656C043224D14609008736D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 656C043024D14609008736D7 /* LaunchScreen.storyboard */; };
+		656C043A24D15029008736D7 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C043924D15029008736D7 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		656C042E24D14609008736D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656C043124D14609008736D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		656C043324D14609008736D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656C043924D15029008736D7 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				656C042724D14608008736D7 /* SceneDelegate.swift */,
 				656C042924D14608008736D7 /* ViewController.swift */,
 				656C042B24D14608008736D7 /* Main.storyboard */,
+				656C043924D15029008736D7 /* Game.swift */,
 				656C042E24D14609008736D7 /* Assets.xcassets */,
 				656C043024D14609008736D7 /* LaunchScreen.storyboard */,
 				656C043324D14609008736D7 /* Info.plist */,
@@ -141,6 +144,7 @@
 				656C042A24D14608008736D7 /* ViewController.swift in Sources */,
 				656C042624D14608008736D7 /* AppDelegate.swift in Sources */,
 				656C042824D14608008736D7 /* SceneDelegate.swift in Sources */,
+				656C043A24D15029008736D7 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
