@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     
-    var  listOfWords = ["tommy","charles","fan","sumit","zhenyu","apple","ios"]
+    var  listOfWords = ["tommy","charles","fan","sumit","zhenyu","apple","questionmark"]
     let gameRound = 7
     var lives = 5
     
@@ -35,9 +35,31 @@ class ViewController: UIViewController {
     }
     
     func newRound()  {
-        let newWord =  listOfWords.removeFirst()
-        currentGame = Game(word: newWord, roundRemain: gameRound, guessed: [])
-        updateUI()
+        if !listOfWords.isEmpty {
+            let newWord =  listOfWords.removeFirst()
+            currentGame = Game(word: newWord, roundRemain: gameRound, guessed: [])
+            updateUI()
+            resetKeyboard(true)
+        } else {
+            showAlert(title: "Congratulations!", message: "Claim your rewards from Tommy!")
+            resetKeyboard(false)
+        }
+        
+    }
+    
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let alertAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        
+        present(alert,animated: true)
+    }
+    
+    func resetKeyboard(_ enable: Bool) {
+        for button in buttons {
+            button.isEnabled = enable
+        }
     }
     
     func updateUI()  {
@@ -50,6 +72,7 @@ class ViewController: UIViewController {
         if currentGame.roundRemain == 0 {
             lives -= 1
             currentGame = Game(word: currentGame.word, roundRemain: gameRound, guessed: [])
+            resetKeyboard(true)
         } else if currentGame.win {
             newRound()
         }
