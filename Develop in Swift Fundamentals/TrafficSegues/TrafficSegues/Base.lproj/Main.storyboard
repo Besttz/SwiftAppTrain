@@ -15,30 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2D-mY-waH">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-Yw-NHt">
+                                <rect key="frame" x="185" y="363" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Yellow"/>
                                 <connections>
-                                    <segue destination="Qby-wv-t1F" kind="show" id="ktF-NQ-Olb"/>
+                                    <action selector="yBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4d-aP-rbY"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePp-Nw-WQd">
-                                <rect key="frame" x="159" y="391" width="97" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcD-cL-qWD">
+                                <rect key="frame" x="186" y="409" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Green"/>
+                                <connections>
+                                    <action selector="gBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7U-eC-MoI"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JE-ot-ikT">
+                                <rect key="frame" x="183" y="462" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="U2D-mY-waH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QYe-jh-TA0"/>
-                            <constraint firstItem="U2D-mY-waH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mGo-O1-o6F"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Red" id="bFB-hM-AFk"/>
                     <connections>
-                        <outlet property="textField" destination="ePp-Nw-WQd" id="cnY-5Q-oe2"/>
+                        <outlet property="segueSwitch" destination="8JE-ot-ikT" id="FE6-e2-wVx"/>
+                        <segue destination="XS4-1X-4PF" kind="show" identifier="Gr" id="dgN-fm-1fp"/>
+                        <segue destination="Qby-wv-t1F" kind="show" identifier="Ye" id="CSr-Cp-iII"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,17 +61,12 @@
                         <viewLayoutGuide key="safeArea" id="dbU-NA-9TQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Green" largeTitleDisplayMode="always" id="YrH-ZI-rOW">
-                        <barButtonItem key="rightBarButtonItem" title="Pop" id="N8o-9t-GXO">
-                            <connections>
-                                <segue destination="Vlw-1v-w2h" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="ffG-j7-gfM"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Pop" id="N8o-9t-GXO"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6B-zd-62s" sceneMemberID="firstResponder"/>
-                <exit id="Vlw-1v-w2h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2373.913043478261" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2007" y="-84"/>
         </scene>
         <!--Yellow-->
         <scene sceneID="kOR-N4-xqu">
@@ -75,27 +75,14 @@
                     <view key="view" contentMode="scaleToFill" id="BU4-7C-mFr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMM-iv-CvX">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="XS4-1X-4PF" kind="show" id="pUc-DU-vHU"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hMM-iv-CvX" firstAttribute="centerY" secondItem="BU4-7C-mFr" secondAttribute="centerY" id="cq9-6P-Ohv"/>
-                            <constraint firstItem="hMM-iv-CvX" firstAttribute="centerX" secondItem="BU4-7C-mFr" secondAttribute="centerX" id="zij-Yi-FqO"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dBX-zG-iHk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Yellow" largeTitleDisplayMode="never" id="ODz-Fd-zhp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foJ-rN-5ws" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710.144927536232" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2842" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pn2-Sr-zay">
