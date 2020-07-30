@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Red-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,6 +22,12 @@
                                     <segue destination="Qby-wv-t1F" kind="show" id="ktF-NQ-Olb"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePp-Nw-WQd">
+                                <rect key="frame" x="159" y="391" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -30,43 +36,39 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bFB-hM-AFk"/>
+                    <navigationItem key="navigationItem" title="Red" id="bFB-hM-AFk"/>
+                    <connections>
+                        <outlet property="textField" destination="ePp-Nw-WQd" id="cnY-5Q-oe2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Green-->
         <scene sceneID="c47-Lw-Y1t">
             <objects>
                 <viewController id="XS4-1X-4PF" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k98-3S-0V2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIJ-LA-XNt">
-                                <rect key="frame" x="188.5" y="433" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="Vlw-1v-w2h" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="nuN-FV-Kn6"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="hIJ-LA-XNt" firstAttribute="centerX" secondItem="k98-3S-0V2" secondAttribute="centerX" id="Cyk-GC-SMa"/>
-                            <constraint firstItem="hIJ-LA-XNt" firstAttribute="centerY" secondItem="k98-3S-0V2" secondAttribute="centerY" id="pdL-DB-Er5"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dbU-NA-9TQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YrH-ZI-rOW"/>
+                    <navigationItem key="navigationItem" title="Green" largeTitleDisplayMode="always" id="YrH-ZI-rOW">
+                        <barButtonItem key="rightBarButtonItem" title="Pop" id="N8o-9t-GXO">
+                            <connections>
+                                <segue destination="Vlw-1v-w2h" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="ffG-j7-gfM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6B-zd-62s" sceneMemberID="firstResponder"/>
                 <exit id="Vlw-1v-w2h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2373.913043478261" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow-->
         <scene sceneID="kOR-N4-xqu">
             <objects>
                 <viewController id="Qby-wv-t1F" customClass="ViewController" customModule="TrafficSegues" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +91,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dBX-zG-iHk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ODz-Fd-zhp"/>
+                    <navigationItem key="navigationItem" title="Yellow" largeTitleDisplayMode="never" id="ODz-Fd-zhp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foJ-rN-5ws" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,8 +102,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Suf-73-dQ6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RVr-Xc-WLC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RVr-Xc-WLC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
