@@ -26,7 +26,7 @@
         <!--Orange-->
         <scene sceneID="G03-1c-WS8">
             <objects>
-                <viewController id="2RF-Rz-fJv" sceneMemberID="viewController">
+                <viewController id="2RF-Rz-fJv" customClass="OViewController" customModule="Rainbow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fa-Ba-Ygw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
