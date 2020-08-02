@@ -189,7 +189,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-fl-ZJq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculating..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbq-fl-ZJq">
                                 <rect key="frame" x="20" y="76" width="374" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -248,7 +248,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5P-ou-X0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710.144927536232" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2186" y="138"/>
+        </scene>
+        <!--Name-->
+        <scene sceneID="76f-5U-xFz">
+            <objects>
+                <viewController id="Pki-vi-SbK" customClass="NameViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNp-ld-60U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Your Name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-ru-WdX">
+                                <rect key="frame" x="20" y="76" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Abx-I8-x5P">
+                                <rect key="frame" x="20" y="377.5" width="374" height="87"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zhenyu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdw-WI-ieS">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-Ui-XZF">
+                                        <rect key="frame" x="0.0" y="57" width="374" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <segue destination="vAi-u3-XrF" kind="show" id="2i3-Js-Obn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ojo-ru-WdX" firstAttribute="leading" secondItem="qrQ-AB-ORd" secondAttribute="leading" constant="20" id="1sh-Aw-3Ii"/>
+                            <constraint firstItem="ojo-ru-WdX" firstAttribute="top" secondItem="qrQ-AB-ORd" secondAttribute="top" constant="20" id="2u7-i2-6AM"/>
+                            <constraint firstItem="Abx-I8-x5P" firstAttribute="centerY" secondItem="jNp-ld-60U" secondAttribute="centerY" id="FnE-5l-jLZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ojo-ru-WdX" secondAttribute="trailing" constant="20" id="Px2-4W-iKp"/>
+                            <constraint firstItem="qrQ-AB-ORd" firstAttribute="trailing" secondItem="Abx-I8-x5P" secondAttribute="trailing" constant="20" id="iaK-GV-emZ"/>
+                            <constraint firstItem="Abx-I8-x5P" firstAttribute="leading" secondItem="qrQ-AB-ORd" secondAttribute="leading" constant="20" id="o2R-Yj-HQv"/>
+                            <constraint firstItem="Abx-I8-x5P" firstAttribute="centerX" secondItem="jNp-ld-60U" secondAttribute="centerX" id="vJD-Ro-NQx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qrQ-AB-ORd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Name" largeTitleDisplayMode="always" id="BNP-KW-nSx"/>
+                    <connections>
+                        <outlet property="nameField" destination="Jdw-WI-ieS" id="2Pa-9k-2lm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cq7-FI-iXO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="138"/>
         </scene>
         <!--Results-->
         <scene sceneID="BSd-X8-B4Q">
@@ -300,7 +353,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obx-9G-c0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="E8K-8f-Rmj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2350.7246376811595" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2826" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ita-7p-wND">
@@ -314,7 +367,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vAi-u3-XrF" kind="relationship" relationship="rootViewController" id="hbu-dM-rMD"/>
+                        <segue destination="Pki-vi-SbK" kind="relationship" relationship="rootViewController" id="bnk-q5-eQO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWn-0f-xbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

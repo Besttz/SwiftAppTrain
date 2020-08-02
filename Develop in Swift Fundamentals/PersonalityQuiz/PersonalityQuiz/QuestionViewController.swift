@@ -78,7 +78,14 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        if questions.isEmpty {
+            singleStackView.isHidden = true
+            multipleStackView.isHidden = true
+            rangedStackView.isHidden = true
+            performSegue(withIdentifier: "Results", sender: nil)
+        } else {
+            updateUI()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -171,16 +178,16 @@ class QuestionViewController: UIViewController {
     @IBAction func rangedAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         let index = Int(round(rangedSlider.value *
-          Float(currentAnswers.count - 1)))
-
+            Float(currentAnswers.count - 1)))
+        
         answersChosen.append(currentAnswers[index])
-
+        
         nextQuestion()
     }
     
     func nextQuestion() {
         questionIndex += 1
-    
+        
         if questionIndex < questions.count {
             updateUI()
         } else {
@@ -191,7 +198,7 @@ class QuestionViewController: UIViewController {
     
     @IBSegueAction func showResults(_ coder: NSCoder) -> ResultsViewController? {
         return ResultsViewController(coder: coder, responses:
-        answersChosen)
+            answersChosen)
     }
     
     /*

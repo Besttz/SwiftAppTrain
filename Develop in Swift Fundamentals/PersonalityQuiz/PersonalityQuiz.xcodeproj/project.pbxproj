@@ -16,10 +16,11 @@
 		656C050724D6CB50008736D7 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C050624D6CB50008736D7 /* QuestionViewController.swift */; };
 		656C050924D6CB5E008736D7 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C050824D6CB5E008736D7 /* ResultsViewController.swift */; };
 		656C050B24D6E984008736D7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C050A24D6E984008736D7 /* Question.swift */; };
+		656C050D24D6F7B2008736D7 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C050C24D6F7B2008736D7 /* NameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		656C04ED24D6C6F3008736D7 /* PersonalityQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalityQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		656C04ED24D6C6F3008736D7 /* What Animal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Animal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		656C04F024D6C6F3008736D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		656C04F224D6C6F3008736D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		656C04F424D6C6F3008736D7 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		656C050624D6CB50008736D7 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		656C050824D6CB5E008736D7 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		656C050A24D6E984008736D7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		656C050C24D6F7B2008736D7 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 		656C04EE24D6C6F3008736D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				656C04ED24D6C6F3008736D7 /* PersonalityQuiz.app */,
+				656C04ED24D6C6F3008736D7 /* What Animal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +69,7 @@
 				656C04F424D6C6F3008736D7 /* IntroductionViewController.swift */,
 				656C04F624D6C6F3008736D7 /* Main.storyboard */,
 				656C050A24D6E984008736D7 /* Question.swift */,
+				656C050C24D6F7B2008736D7 /* NameViewController.swift */,
 				656C050624D6CB50008736D7 /* QuestionViewController.swift */,
 				656C050824D6CB5E008736D7 /* ResultsViewController.swift */,
 				656C04F924D6C6F5008736D7 /* Assets.xcassets */,
@@ -93,7 +96,7 @@
 			);
 			name = PersonalityQuiz;
 			productName = PersonalityQuiz;
-			productReference = 656C04ED24D6C6F3008736D7 /* PersonalityQuiz.app */;
+			productReference = 656C04ED24D6C6F3008736D7 /* What Animal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,6 +152,7 @@
 			files = (
 				656C04F524D6C6F3008736D7 /* IntroductionViewController.swift in Sources */,
 				656C04F124D6C6F3008736D7 /* AppDelegate.swift in Sources */,
+				656C050D24D6F7B2008736D7 /* NameViewController.swift in Sources */,
 				656C050724D6CB50008736D7 /* QuestionViewController.swift in Sources */,
 				656C050B24D6E984008736D7 /* Question.swift in Sources */,
 				656C050924D6CB5E008736D7 /* ResultsViewController.swift in Sources */,
@@ -304,8 +308,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Besttz.PersonalityQuiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Besttz.Animals;
+				PRODUCT_NAME = "What Animal";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,8 +327,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Besttz.PersonalityQuiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Besttz.Animals;
+				PRODUCT_NAME = "What Animal";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

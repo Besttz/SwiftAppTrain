@@ -18,7 +18,9 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calculatePersonalityResult()
+        if !responses.isEmpty {
+            calculatePersonalityResult()
+        }
         navigationItem.hidesBackButton = true
     }
     
