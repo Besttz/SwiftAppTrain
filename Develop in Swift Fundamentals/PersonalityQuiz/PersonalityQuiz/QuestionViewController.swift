@@ -188,6 +188,12 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    
+    @IBSegueAction func showResults(_ coder: NSCoder) -> ResultsViewController? {
+        return ResultsViewController(coder: coder, responses:
+        answersChosen)
+    }
+    
     /*
      // MARK: - Navigation
      
