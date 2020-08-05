@@ -100,13 +100,76 @@
         <!--Result View Controller-->
         <scene sceneID="dj8-kG-lEo">
             <objects>
-                <viewController storyboardIdentifier="Result" id="QLd-Df-Gbp" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultVC" id="QLd-Df-Gbp" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iNS-nb-OXH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZa-gM-H6f" userLabel="DimView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qz-Gx-0Mp">
+                                <rect key="frame" x="40" y="144" width="334" height="618"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PUB-WE-lUM">
+                                        <rect key="frame" x="50" y="50" width="234" height="518"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTr-yK-cUF">
+                                                <rect key="frame" x="87.5" y="0.0" width="59.5" height="172.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIv-qn-yKG">
+                                                <rect key="frame" x="0.0" y="172.5" width="234" height="173"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-Zr-RPO">
+                                                <rect key="frame" x="0.0" y="345.5" width="234" height="172.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="nextTapped:" destination="QLd-Df-Gbp" eventType="touchUpInside" id="CEk-cX-bBN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dPc-Zr-RPO" firstAttribute="width" secondItem="PUB-WE-lUM" secondAttribute="width" id="Rgi-SV-iCH"/>
+                                            <constraint firstItem="PIv-qn-yKG" firstAttribute="width" secondItem="PUB-WE-lUM" secondAttribute="width" id="r78-fi-9Ab"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="PUB-WE-lUM" firstAttribute="leading" secondItem="5Qz-Gx-0Mp" secondAttribute="leading" constant="50" id="JAF-2s-8cq"/>
+                                    <constraint firstItem="PUB-WE-lUM" firstAttribute="top" secondItem="5Qz-Gx-0Mp" secondAttribute="top" constant="50" id="q5w-ra-BMa"/>
+                                    <constraint firstAttribute="bottom" secondItem="PUB-WE-lUM" secondAttribute="bottom" constant="50" id="qwb-2Y-SLJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="PUB-WE-lUM" secondAttribute="trailing" constant="50" id="yXH-yW-Ny3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SSw-Hv-7g5" firstAttribute="trailing" secondItem="5Qz-Gx-0Mp" secondAttribute="trailing" constant="40" id="4is-KL-Krl"/>
+                            <constraint firstItem="5Qz-Gx-0Mp" firstAttribute="top" secondItem="SSw-Hv-7g5" secondAttribute="top" constant="100" id="D0h-HQ-Hcx"/>
+                            <constraint firstItem="SSw-Hv-7g5" firstAttribute="bottom" secondItem="5Qz-Gx-0Mp" secondAttribute="bottom" constant="100" id="EE8-vu-whZ"/>
+                            <constraint firstItem="CZa-gM-H6f" firstAttribute="top" secondItem="iNS-nb-OXH" secondAttribute="top" id="Sfh-Zw-J9y"/>
+                            <constraint firstItem="CZa-gM-H6f" firstAttribute="leading" secondItem="iNS-nb-OXH" secondAttribute="leading" id="Toi-yl-09m"/>
+                            <constraint firstItem="5Qz-Gx-0Mp" firstAttribute="leading" secondItem="SSw-Hv-7g5" secondAttribute="leading" constant="40" id="bh4-06-Brk"/>
+                            <constraint firstAttribute="trailing" secondItem="CZa-gM-H6f" secondAttribute="trailing" id="veK-ej-rbm"/>
+                            <constraint firstAttribute="bottom" secondItem="CZa-gM-H6f" secondAttribute="bottom" id="xba-Cj-rWt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SSw-Hv-7g5"/>
                     </view>
+                    <connections>
+                        <outlet property="dialogV" destination="5Qz-Gx-0Mp" id="kv9-xb-WB3"/>
+                        <outlet property="dimV" destination="CZa-gM-H6f" id="B93-tv-gO7"/>
+                        <outlet property="feedbackL" destination="PIv-qn-yKG" id="pc5-Rx-q46"/>
+                        <outlet property="nextB" destination="dPc-Zr-RPO" id="WN1-Gf-Kvz"/>
+                        <outlet property="titleL" destination="tTr-yK-cUF" id="sqv-SE-f9A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sn9-gm-AYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

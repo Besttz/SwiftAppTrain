@@ -17,8 +17,13 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     var questions = [Question]()
     var index = 0
     
+    var resultDialog:ResultViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultDialog = storyboard?.instantiateViewController(identifier: "ResultVC") as? ResultViewController
+        resultDialog?.modalPresentationStyle = .overCurrentContext
         // Set delegate and datasource
         tableView.delegate = self
         tableView.dataSource = self
@@ -85,6 +90,11 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             // Wrong
             print("Not Correct")
             
+        }
+        
+        // Show Pop
+        if resultDialog != nil {
+            present(resultDialog!, animated: true, completion: nil)
         }
         
         // Check any question remain
