@@ -16,6 +16,7 @@
 		65738DDC24DAC38C00E1DC09 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738DDB24DAC38C00E1DC09 /* ResultViewController.swift */; };
 		65738DDE24DAC3F600E1DC09 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738DDD24DAC3F600E1DC09 /* Question.swift */; };
 		65738DE224DAC47100E1DC09 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738DE124DAC47100E1DC09 /* QuizModel.swift */; };
+		65738DE424DAD19A00E1DC09 /* QuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 65738DE324DAD19A00E1DC09 /* QuestionData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		65738DDB24DAC38C00E1DC09 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		65738DDD24DAC3F600E1DC09 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		65738DE124DAC47100E1DC09 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		65738DE324DAD19A00E1DC09 /* QuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				65738DE024DAC45500E1DC09 /* View */,
 				65738DDF24DAC44D00E1DC09 /* Model */,
 				65738DD024DAC37100E1DC09 /* Assets.xcassets */,
+				65738DE324DAD19A00E1DC09 /* QuestionData.json */,
 				65738DD524DAC37100E1DC09 /* Info.plist */,
 			);
 			path = Quiz;
@@ -153,6 +156,7 @@
 				65738DD424DAC37100E1DC09 /* LaunchScreen.storyboard in Resources */,
 				65738DD124DAC37100E1DC09 /* Assets.xcassets in Resources */,
 				65738DCF24DAC37000E1DC09 /* Main.storyboard in Resources */,
+				65738DE424DAD19A00E1DC09 /* QuestionData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
