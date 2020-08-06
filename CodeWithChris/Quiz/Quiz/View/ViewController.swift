@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITableViewDataSource, ResultViewControllerProtocol {
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -16,6 +18,7 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     var model = QuizModel()
     var questions = [Question]()
     var index = 0
+    var correct = 0
     
     var resultDialog:ResultViewController?
     
@@ -24,11 +27,13 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         
         resultDialog = storyboard?.instantiateViewController(identifier: "ResultVC") as? ResultViewController
         resultDialog?.modalPresentationStyle = .overCurrentContext
+        resultDialog?.delegate = self
         // Set delegate and datasource
         tableView.delegate = self
         tableView.dataSource = self
         model.delegate = self
         model.getQuestion()
+        
     }
     
     func displayQ() {
@@ -82,30 +87,51 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Check if the selected answer is right
         let q = questions[index]
+        let titleText: String
         
         if q.correctAnswerIndex == indexPath.row {
             // Correct
             print("Correct")
+            titleText = "Correct"
+            correct += 1
         } else {
             // Wrong
             print("Not Correct")
-            
+            titleText = "Sorry"
         }
         
         // Show Pop
         if resultDialog != nil {
+            resultDialog!.feedbackText = q.feedback!
+            resultDialog!.titleText = titleText
+            resultDialog!.buttonText = "Next"
+            
             present(resultDialog!, animated: true, completion: nil)
         }
-        
+    
+    }
+    
+    func dialogDismissed() {
         // Check any question remain
         
         index += 1
         if index < questions.count {
             displayQ()
+        } else if index == questions.count {
+            // Show a summary dialog
+            // Show Pop
+            if resultDialog != nil {
+                resultDialog!.feedbackText = "You got \(correct) correct out of \(questions.count) questions!"
+                resultDialog!.titleText = "Congratulations!"
+                resultDialog!.buttonText = "Restart"
+                
+                present(resultDialog!, animated: true, completion: nil)
+            }
         } else {
-            
+            index = 0
+            correct = 0
+            displayQ()
         }
-        
     }
     
 }
