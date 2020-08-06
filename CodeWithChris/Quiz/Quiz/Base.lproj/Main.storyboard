@@ -90,6 +90,9 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="UC7-Tw-NQb" id="XEx-MM-JMA"/>
+                        <outlet property="rootStackV" destination="1kG-7f-hz6" id="1sI-UD-WIc"/>
+                        <outlet property="stackViewLeadingConstraint" destination="t3P-Qt-nxv" id="HSq-Ro-yb2"/>
+                        <outlet property="stackViewTrailingConstraint" destination="6gA-uY-XrM" id="lvU-Jg-eoe"/>
                         <outlet property="tableView" destination="F2q-rj-G4G" id="b8H-2a-JBX"/>
                     </connections>
                 </viewController>

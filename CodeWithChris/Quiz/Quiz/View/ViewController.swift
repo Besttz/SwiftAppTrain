@@ -14,6 +14,10 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var rootStackV: UIStackView!
+    
+    @IBOutlet weak var stackViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stackViewTrailingConstraint: NSLayoutConstraint!
     
     var model = QuizModel()
     var questions = [Question]()
@@ -36,6 +40,38 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         
     }
     
+    func questionSlideIn() {
+        // Set Initial State
+        stackViewLeadingConstraint.constant = 1000
+        stackViewTrailingConstraint.constant = -1000
+        rootStackV.alpha = 0
+        view.layoutIfNeeded()
+        // Animated
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.stackViewLeadingConstraint.constant = 0
+            self.stackViewTrailingConstraint.constant = 0
+            self.rootStackV.alpha = 1
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+    }
+    
+    func questionSlideOut() {
+        // Set Initial State
+        stackViewLeadingConstraint.constant = 0
+        stackViewTrailingConstraint.constant = 0
+        rootStackV.alpha = 1
+        view.layoutIfNeeded()
+        // Animated
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.stackViewLeadingConstraint.constant = -1000
+            self.stackViewTrailingConstraint.constant = 1000
+            self.rootStackV.alpha = 0
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+    }
+    
     func displayQ() {
         guard questions.count > 0 && index < questions.count else  {
             return
@@ -43,6 +79,9 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         questionLabel.text = questions[index].question
         tableView.reloadData()
         
+        DispatchQueue.main.async {
+            self.questionSlideIn()
+        }
     }
     
     func quizRetrive(_ questions: [Question]) {
@@ -89,7 +128,6 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             }
             
         } 
-        
         // Return
         return cell
     }
@@ -108,6 +146,10 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             // Wrong
             print("Not Correct")
             titleText = "Sorry"
+        }
+        
+        DispatchQueue.main.async {
+            self.questionSlideOut()
         }
         
         // Show Pop
@@ -147,7 +189,9 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         } else {
             index = 0
             correct = 0
+            
             displayQ()
+            
         }
     }
     
