@@ -19,4 +19,15 @@
     "correctAnswerIndex": 1,
     "feedback": "let is the keyword use to declare a new constant."
   }
+  ,
+  {
+    "question": "谁是智障",
+    "answers": [
+      "犀浦",
+      "高特",
+      "咩"
+    ],
+    "correctAnswerIndex": 0,
+    "feedback": "法特犀浦咩咩~"
+  }
 ]

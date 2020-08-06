@@ -16,9 +16,10 @@ class QuizModel {
     var delegate:QuizProtocol?
     func getQuestion() {
         // Fetch the Questions
-        getLocalJSON()
+//        getLocalJSON()
+                getRemoteJSON()
         // Notify the delegate
-//        delegate?.quizRetrive([Question]())
+        //        delegate?.quizRetrive([Question]())
     }
     
     func getLocalJSON()  {
@@ -37,6 +38,39 @@ class QuizModel {
         } catch  {
             print("Something Wrong")
         }
-       
+    }
+    
+    func getRemoteJSON() {
+        
+        // Create a URL object
+        let url = URL(string: "https://codewithchris.com/code/QuestionData.json")
+        
+        guard url != nil else {
+            print("Couldn't form URL object")
+            return
+        }
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+            
+            if error == nil && data != nil{
+                
+                do {
+                    
+                    let jsonDecoder = JSONDecoder()
+                    let qs = try jsonDecoder.decode([Question].self, from: data!)
+                    
+                    // Use the main thread to notify the UIview
+                    DispatchQueue.main.async {
+                        self.delegate?.quizRetrive(qs)
+                    }
+                    
+                } catch  {
+                    print("Something Wrong")
+                }
+            }
+        }
+        
+        dataTask.resume()
     }
 }

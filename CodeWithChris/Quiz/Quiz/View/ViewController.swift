@@ -48,6 +48,16 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
     func quizRetrive(_ questions: [Question]) {
         // Get a reference to the question
         self.questions = questions
+        
+        // Check if State saved
+        let saveIndex = StateManager.retrieveValue(key: StateManager.questionIntKey) as? Int
+        if saveIndex != nil && saveIndex! < questions.count {
+            index = saveIndex!
+        }
+        let saveCorrect = StateManager.retrieveValue(key: StateManager.numCorrectKey) as? Int
+        if saveCorrect != nil && saveCorrect! <= questions.count {
+            correct = saveCorrect!
+        }
         // Reload the tableview
         displayQ()
         print("Question retrieved")
@@ -106,9 +116,12 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
             resultDialog!.titleText = titleText
             resultDialog!.buttonText = "Next"
             
-            present(resultDialog!, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                self.present(self.resultDialog!, animated: true, completion: nil)
+            }
+            
         }
-    
+        
     }
     
     func dialogDismissed() {
@@ -117,6 +130,9 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
         index += 1
         if index < questions.count {
             displayQ()
+            
+            // Save State
+            StateManager.saveState(numCorrect: correct, questionInt: index )
         } else if index == questions.count {
             // Show a summary dialog
             // Show Pop
@@ -127,6 +143,7 @@ class ViewController: UIViewController, QuizProtocol, UITableViewDelegate, UITab
                 
                 present(resultDialog!, animated: true, completion: nil)
             }
+            StateManager.clear()
         } else {
             index = 0
             correct = 0
