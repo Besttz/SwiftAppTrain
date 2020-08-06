@@ -37,13 +37,38 @@ class ResultViewController: UIViewController {
         titleL.text = titleText
         feedbackL.text = feedbackText
         nextB.setTitle(buttonText, for: .normal)
+        
+        // Hide the elements
+        dimV.alpha = 0
+        titleL.alpha = 0
+        feedbackL.alpha = 0
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+            self.dimV.alpha = 1
+            self.titleL.alpha = 1
+            self.feedbackL.alpha = 1
+            
+        }, completion: nil)
+    }
+    
     @IBAction func nextTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
         
-        // Notify delegate
-        delegate?.dialogDismissed()
         
+        // Fade out this view
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.dimV.alpha = 0
+            self.titleL.alpha = 0
+            self.feedbackL.alpha = 0
+        }) { (completed) in
+            self.dismiss(animated: true, completion: nil)
+            // Notify delegate
+            self.delegate?.dialogDismissed()
+                   
+        }
+        
+       
     }
     
    
