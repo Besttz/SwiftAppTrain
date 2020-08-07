@@ -17,6 +17,7 @@
 		65738E0A24DD1CD700E1DC09 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E0924DD1CD700E1DC09 /* ArticleService.swift */; };
 		65738E0D24DD1D4500E1DC09 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E0C24DD1D4500E1DC09 /* ArticleModel.swift */; };
 		65738E1024DD5C4D00E1DC09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E0F24DD5C4D00E1DC09 /* DetailViewController.swift */; };
+		65738E1224DD613600E1DC09 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E1124DD613600E1DC09 /* ArticleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		65738E0924DD1CD700E1DC09 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		65738E0C24DD1D4500E1DC09 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		65738E0F24DD5C4D00E1DC09 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		65738E1124DD613600E1DC09 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				65738DF724DD1AE400E1DC09 /* ViewController.swift */,
 				65738E0F24DD5C4D00E1DC09 /* DetailViewController.swift */,
+				65738E1124DD613600E1DC09 /* ArticleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				65738E0824DD1B0300E1DC09 /* Article.swift in Sources */,
 				65738DF824DD1AE400E1DC09 /* ViewController.swift in Sources */,
 				65738DF424DD1AE400E1DC09 /* AppDelegate.swift in Sources */,
+				65738E1224DD613600E1DC09 /* ArticleTableViewCell.swift in Sources */,
 				65738E0D24DD1D4500E1DC09 /* ArticleModel.swift in Sources */,
 				65738DF624DD1AE400E1DC09 /* SceneDelegate.swift in Sources */,
 				65738E1024DD5C4D00E1DC09 /* DetailViewController.swift in Sources */,
