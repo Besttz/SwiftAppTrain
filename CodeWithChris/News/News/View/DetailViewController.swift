@@ -12,13 +12,13 @@ import WebKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var webV: WKWebView!
+    @IBOutlet weak var spiner: UIActivityIndicatorView!
     
     var url:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        webV.navigationDelegate = self
     }
     
 
@@ -27,8 +27,21 @@ class DetailViewController: UIViewController {
             guard let urlObject =  URL(string: url!) else {
                 return
             }
+            
+            spiner.alpha = 1
+            spiner.startAnimating()
+
             webV.load(URLRequest(url:urlObject))
         }
     }
 
+}
+
+extension DetailViewController: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // Stop the spinner
+        spiner.startAnimating()
+        spiner.alpha = 0
+    }
 }

@@ -92,18 +92,24 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8OE-Gq-w0Y">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GIb-Ec-hSS" secondAttribute="trailing" id="2p9-fb-ZwR"/>
+                            <constraint firstItem="8OE-Gq-w0Y" firstAttribute="centerY" secondItem="xK8-ab-dCO" secondAttribute="centerY" id="5vy-1c-NsS"/>
                             <constraint firstItem="GIb-Ec-hSS" firstAttribute="top" secondItem="xK8-ab-dCO" secondAttribute="top" id="KKL-0u-nhm"/>
                             <constraint firstItem="GIb-Ec-hSS" firstAttribute="leading" secondItem="xK8-ab-dCO" secondAttribute="leading" id="KRh-kO-ekn"/>
+                            <constraint firstItem="8OE-Gq-w0Y" firstAttribute="centerX" secondItem="xK8-ab-dCO" secondAttribute="centerX" id="Pyz-sZ-qq4"/>
                             <constraint firstAttribute="bottom" secondItem="GIb-Ec-hSS" secondAttribute="bottom" id="vAJ-tm-6OM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s78-R7-wlA"/>
                     </view>
                     <navigationItem key="navigationItem" id="V6w-mU-bq0"/>
                     <connections>
+                        <outlet property="spiner" destination="8OE-Gq-w0Y" id="8Nl-kd-KgB"/>
                         <outlet property="webV" destination="GIb-Ec-hSS" id="hC1-4h-Fms"/>
                     </connections>
                 </viewController>

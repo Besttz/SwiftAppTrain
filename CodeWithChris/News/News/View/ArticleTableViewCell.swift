@@ -19,12 +19,21 @@ class ArticleTableViewCell: UITableViewCell {
         
         // Clean uo the cell
         imageV.image = nil
-        titleL.text  = nil
+        titleL.text  = ""
+        
+        imageV.alpha = 0
+        titleL.alpha = 0
+        
         
         articleToDisplay = article
         
         // Set the title
         titleL.text  = articleToDisplay!.title
+        
+        // Animate
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.titleL.alpha = 1
+        }, completion: nil)
         
         // Check if it has an image
         
@@ -36,6 +45,10 @@ class ArticleTableViewCell: UITableViewCell {
         
         if let image = CacheManager.load(imageUrl) {
             self.imageV.image = UIImage(data: image)
+            // Animate
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                self.imageV.alpha = 1
+            }, completion: nil)
             return
         }
         // Download the img
@@ -62,6 +75,10 @@ class ArticleTableViewCell: UITableViewCell {
                     DispatchQueue.main.async {
                         // Display the image
                         self.imageV.image = UIImage(data: data!)
+                        // Animate
+                        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                            self.imageV.alpha = 1
+                        }, completion: nil)
                     }
                 }
             }
