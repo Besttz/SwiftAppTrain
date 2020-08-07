@@ -31,6 +31,13 @@ class ArticleTableViewCell: UITableViewCell {
         guard let imageUrl = articleToDisplay!.urlToImage  else {
             return
         }
+        
+        // Check if this image cached
+        
+        if let image = CacheManager.load(imageUrl) {
+            self.imageV.image = UIImage(data: image)
+            return
+        }
         // Download the img
         
         // Create a URL object
@@ -47,11 +54,16 @@ class ArticleTableViewCell: UITableViewCell {
             // Check Errors and Data
             if error == nil && data != nil{
                 
+                // Cache the image
+                CacheManager.save(url: imageUrl, imageData: data!)
+                
                 // Check if the image is for this article
                 if self.articleToDisplay!.urlToImage == imageUrl {
                     DispatchQueue.main.async {
                         // Display the image
                         self.imageV.image = UIImage(data: data!)
+                        
+                        
                     }
                 }
                 
