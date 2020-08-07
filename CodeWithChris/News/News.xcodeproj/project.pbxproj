@@ -19,6 +19,7 @@
 		65738E1024DD5C4D00E1DC09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E0F24DD5C4D00E1DC09 /* DetailViewController.swift */; };
 		65738E1224DD613600E1DC09 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E1124DD613600E1DC09 /* ArticleTableViewCell.swift */; };
 		65738E1424DD655800E1DC09 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65738E1324DD655800E1DC09 /* CacheManager.swift */; };
+		65738E1724DD6A5800E1DC09 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65738E1624DD6A5800E1DC09 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		65738E0F24DD5C4D00E1DC09 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		65738E1124DD613600E1DC09 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		65738E1324DD655800E1DC09 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		65738E1624DD6A5800E1DC09 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65738E1724DD6A5800E1DC09 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +57,7 @@
 			children = (
 				65738DF224DD1AE400E1DC09 /* News */,
 				65738DF124DD1AE400E1DC09 /* Products */,
+				65738E1524DD6A5700E1DC09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +103,14 @@
 				65738E1124DD613600E1DC09 /* ArticleTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		65738E1524DD6A5700E1DC09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65738E1624DD6A5800E1DC09 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

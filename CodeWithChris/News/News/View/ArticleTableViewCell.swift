@@ -62,12 +62,8 @@ class ArticleTableViewCell: UITableViewCell {
                     DispatchQueue.main.async {
                         // Display the image
                         self.imageV.image = UIImage(data: data!)
-                        
-                        
                     }
                 }
-                
-                
             }
         }
         
