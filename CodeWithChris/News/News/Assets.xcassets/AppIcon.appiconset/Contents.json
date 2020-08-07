@@ -60,21 +60,25 @@
       "size" : "20x20"
     },
     {
+      "filename" : "29@1x-Settings(iPad2,iPadMini).png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
+      "filename" : "29@2x-Settings(iPhone6,5s,5,4s,4)-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "40@1x-Spotlight(iPad2,iPadMini)-1.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
+      "filename" : "40@2x-Spotlight(iPhone6,5s,5,4s,4)-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
