@@ -36,9 +36,45 @@ class ViewController: UIViewController {
          db.collection("consoles").document("snes").setData([ "name":"Super NES", "units" : "49 million", "year" : "1990"], merge: true)
          */
         
-        // Delete Object
-        db.collection("game").document("PdcaZACx2wSM4OKar2JE").setData([ "genre":FieldValue.delete()], merge: true)
-        db.collection("consoles").document("snes").delete()
+        /*// Delete Object
+         db.collection("game").document("PdcaZACx2wSM4OKar2JE").setData([ "genre":FieldValue.delete()], merge: true)
+         db.collection("consoles").document("snes").delete()
+         */
+        
+        /* // Read Obj
+         db.collection("consoles").document("nes").getDocument { (doc, error) in
+         if doc != nil && error == nil  {
+         print(doc?.data() ?? "Empty Doc")
+         }
+         }
+         
+         db.collection("game").getDocuments { (docs, error) in
+         if docs != nil && error == nil  {
+         for doc in docs!.documents {
+         print(doc.data())
+         }
+         }
+         }
+         */
+        
+        // Listener
+        let docListener = db.collection("game").document("tetris").addSnapshotListener { (docSnap, error) in
+            if docSnap != nil && error == nil && docSnap!.data() != nil  {
+                print(docSnap!.data()!)
+            }
+        }
+        
+        //        docListener.remove()
+        
+        let coListener = db.collection("consoles").addSnapshotListener { (querySnap, error) in
+            
+            if querySnap != nil && error == nil  {
+                for change in querySnap!.documentChanges {
+                    print(change.document.data())
+                }
+            }
+        }
+        //        coListener.remove()
     }
     
     
