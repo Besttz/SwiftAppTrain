@@ -10,12 +10,13 @@
 		3B4609F4516AD964AFC3D3AC /* Pods_Journal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6CAA431BBF17309AE9748C /* Pods_Journal.framework */; };
 		65BBEA2424E0132100DF3965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA2324E0132100DF3965 /* AppDelegate.swift */; };
 		65BBEA2624E0132100DF3965 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA2524E0132100DF3965 /* SceneDelegate.swift */; };
-		65BBEA2824E0132100DF3965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA2724E0132100DF3965 /* ViewController.swift */; };
 		65BBEA2B24E0132100DF3965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBEA2924E0132100DF3965 /* Main.storyboard */; };
 		65BBEA2D24E0132300DF3965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BBEA2C24E0132300DF3965 /* Assets.xcassets */; };
 		65BBEA3024E0132300DF3965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBEA2E24E0132300DF3965 /* LaunchScreen.storyboard */; };
 		65BBEA3824E017B000DF3965 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65BBEA3724E017B000DF3965 /* GoogleService-Info.plist */; };
 		65BBEA3D24E018AC00DF3965 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA3C24E018AC00DF3965 /* NoteViewController.swift */; };
+		65BBEA3E24E01C3C00DF3965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA2724E0132100DF3965 /* ViewController.swift */; };
+		65BBEA4024E01D6800DF3965 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA3F24E01D6800DF3965 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		65BBEA3124E0132300DF3965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BBEA3724E017B000DF3965 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65BBEA3C24E018AC00DF3965 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		65BBEA3F24E01D6800DF3965 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		973F0DF66A1974BFE7D42D42 /* Pods-Journal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journal.release.xcconfig"; path = "Target Support Files/Pods-Journal/Pods-Journal.release.xcconfig"; sourceTree = "<group>"; };
 		F0B6CBD31F49DF338F126B25 /* Pods-Journal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Journal.debug.xcconfig"; path = "Target Support Files/Pods-Journal/Pods-Journal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 		65BBEA3B24E0189200DF3965 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				65BBEA3F24E01D6800DF3965 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,9 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BBEA4024E01D6800DF3965 /* Note.swift in Sources */,
 				65BBEA3D24E018AC00DF3965 /* NoteViewController.swift in Sources */,
-				65BBEA2824E0132100DF3965 /* ViewController.swift in Sources */,
 				65BBEA2424E0132100DF3965 /* AppDelegate.swift in Sources */,
+				65BBEA3E24E01C3C00DF3965 /* ViewController.swift in Sources */,
 				65BBEA2624E0132100DF3965 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
