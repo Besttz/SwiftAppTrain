@@ -40,6 +40,8 @@ class ViewController: UIViewController {
         let dest = segue.destination as! NoteViewController
         if let index = tableView.indexPathForSelectedRow {
             dest.note = notes[index.row]
+            // Deselect the selected row so that it doesn't interfere with new note creation
+            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: false)
         }
     }
     
@@ -66,6 +68,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: false)
+    }
     
 }
 
