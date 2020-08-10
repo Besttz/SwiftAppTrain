@@ -100,6 +100,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fou-EF-rlc">
                                                 <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -134,7 +135,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXm-fc-lnX">
                                         <rect key="frame" x="0.0" y="718" width="374" height="50"/>
@@ -171,7 +172,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wfs-Vk-72g"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wfs-Vk-72g" firstAttribute="trailing" secondItem="5VU-H4-UPP" secondAttribute="trailing" constant="20" id="DPB-KZ-HxA"/>
                             <constraint firstItem="5VU-H4-UPP" firstAttribute="top" secondItem="wfs-Vk-72g" secondAttribute="top" constant="20" id="nl8-TB-UUH"/>
