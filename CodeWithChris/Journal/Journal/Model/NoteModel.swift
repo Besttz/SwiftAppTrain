@@ -15,11 +15,19 @@ protocol NoteModelProtocol {
 
 class NoteModel {
     var delegate:NoteModelProtocol?
+    var listener:ListenerRegistration?
+    
     let db = Firestore.firestore()
     
+    deinit {
+        // Unregister database listener
+        listener?.remove()
+    }
+    
     func getNotes()  {
-        var notes = [Note]()
-        db.collection("Note").getDocuments { (snapshot, error) in
+        
+        self.listener = db.collection("Note").addSnapshotListener { (snapshot, error) in
+            var notes = [Note]()
             if  snapshot != nil && error == nil  {
                 for doc in snapshot!.documents {
                     let data  = doc.data()
@@ -28,8 +36,9 @@ class NoteModel {
                     notes.append(n)
                 }
             } // End of getDocuments
-            
-            self.delegate?.getNotes(notes: notes)
+            DispatchQueue.main.async {
+                self.delegate?.getNotes(notes: notes)
+            }
         }
     }
     

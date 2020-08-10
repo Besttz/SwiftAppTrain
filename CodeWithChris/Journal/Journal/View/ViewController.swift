@@ -21,12 +21,13 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         model.delegate = self
-        refresh()
-    }
-    
-    func refresh()  {
+//        refresh()
         model.getNotes()
     }
+    
+//    func refresh()  {
+//        model.getNotes()
+//    }
     //    override func viewWillAppear(_ animated: Bool) {
     //        model.getNotes()
     //    }
