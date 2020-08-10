@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B4609F4516AD964AFC3D3AC /* Pods_Journal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6CAA431BBF17309AE9748C /* Pods_Journal.framework */; };
+		6537580A24E1668D004929C4 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6537580924E1668D004929C4 /* NoteModel.swift */; };
 		65BBEA2424E0132100DF3965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA2324E0132100DF3965 /* AppDelegate.swift */; };
 		65BBEA2624E0132100DF3965 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBEA2524E0132100DF3965 /* SceneDelegate.swift */; };
 		65BBEA2B24E0132100DF3965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBEA2924E0132100DF3965 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1C6CAA431BBF17309AE9748C /* Pods_Journal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Journal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6537580924E1668D004929C4 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		65BBEA2024E0132100DF3965 /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBEA2324E0132100DF3965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65BBEA2524E0132100DF3965 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				65BBEA3F24E01D6800DF3965 /* Note.swift */,
+				6537580924E1668D004929C4 /* NoteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BBEA4024E01D6800DF3965 /* Note.swift in Sources */,
+				6537580A24E1668D004929C4 /* NoteModel.swift in Sources */,
 				65BBEA3D24E018AC00DF3965 /* NoteViewController.swift in Sources */,
 				65BBEA2424E0132100DF3965 /* AppDelegate.swift in Sources */,
 				65BBEA3E24E01C3C00DF3965 /* ViewController.swift in Sources */,
