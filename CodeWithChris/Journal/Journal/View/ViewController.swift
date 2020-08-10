@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     //    override func viewWillAppear(_ animated: Bool) {
     //        model.getNotes()
     //    }
-    //    
+    //
     //    override func viewDidAppear(_ animated: Bool) {
     //        model.getNotes()
     //    }
