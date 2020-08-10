@@ -9,31 +9,79 @@
 import UIKit
 
 class NoteViewController: UIViewController {
-
+    
     @IBOutlet weak var titleV: UITextField!
     @IBOutlet weak var textV: UITextView!
     @IBOutlet weak var starB: UIButton!
+    @IBOutlet weak var segueToHOme: UITextView!
+    
+    var note:Note?
+    private var model = NoteModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if note != nil {
+            titleV.text = note!.title
+            textV.text = note!.body
+        } else {
+            titleV.text = nil
+            textV.text = "..."
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+    }
+    
     @IBAction func deleteTapped(_ sender: Any) {
+        if note != nil {
+            model.deleteNotes(note: note!)
+        }
+        // Close the popup
+        
     }
     
     @IBAction func doneTapped(_ sender: Any) {
+        if note != nil {
+            // Check if changed
+            if note!.body != textV.text || note!.title != titleV.text {
+                note!.lastUpdatedAt = Date()
+            }
+                        
+            // Update the note
+            note!.title = titleV.text ?? "No Title"
+            note!.body = textV.text ?? "No Content"
+            
+            // Test
+//            note!.docId = UUID().uuidString
+            
+        } else {
+            note = Note(docId: UUID().uuidString, title: titleV.text ?? "No Title", body: textV.text ?? "No Content", isStarred: false, createdAt: Date(), lastUpdatedAt: Date())
+        }
+        // Save the note
+        model.save(note: note!)
+        // Close the popup
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ViewController
+        vc.refresh()
+        
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

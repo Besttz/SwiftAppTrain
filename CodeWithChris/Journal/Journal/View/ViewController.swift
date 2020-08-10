@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     private var notes = [Note]()
     private var model = NoteModel()
-        
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,31 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         
         model.delegate = self
+        refresh()
+    }
+    
+    func refresh()  {
         model.getNotes()
     }
-
-
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        model.getNotes()
+    //    }
+    //    
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        model.getNotes()
+    //    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! NoteViewController
+        if let index = tableView.indexPathForSelectedRow {
+            dest.note = notes[index.row]
+        }
+    }
+    
+    @IBAction func unwindToHome(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -40,7 +61,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let bodyL = cell.viewWithTag(2) as! UILabel
         titleL.text = notes[indexPath.row].title
         bodyL.text = notes[indexPath.row].body
-
         
         return cell
     }
