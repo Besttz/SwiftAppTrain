@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="What_Animal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y33-LQ-K8C">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y33-LQ-K8C">
                                         <rect key="frame" x="0.0" y="53.5" width="398" height="30"/>
                                         <state key="normal" title="START"/>
                                         <connections>
@@ -34,14 +36,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BlU-Pl-wyR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8uS-pe-VkT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BlU-Pl-wyR" secondAttribute="trailing" constant="8" id="AtW-wH-Z2H"/>
                             <constraint firstItem="BlU-Pl-wyR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Y2a-jy-9Xf"/>
                             <constraint firstItem="BlU-Pl-wyR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yfl-OX-IvO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,7 +53,7 @@
         <!--Question View Controller-->
         <scene sceneID="v1E-dr-cZf">
             <objects>
-                <viewController id="vAi-u3-XrF" customClass="QuestionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vAi-u3-XrF" customClass="QuestionViewController" customModule="What_Animal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Od5-6a-dh2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,28 +61,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xb9-Ju-TQq">
                                 <rect key="frame" x="20" y="331" width="374" height="180"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-Tq-oyc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-Tq-oyc">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="singleAnswerButtonPressed:" destination="vAi-u3-XrF" eventType="touchUpInside" id="zfH-Rd-fhU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-zT-1B8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-zT-1B8">
                                         <rect key="frame" x="0.0" y="50" width="374" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="singleAnswerButtonPressed:" destination="vAi-u3-XrF" eventType="touchUpInside" id="3in-5P-W22"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2g-H4-abN">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2g-H4-abN">
                                         <rect key="frame" x="0.0" y="100" width="374" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="singleAnswerButtonPressed:" destination="vAi-u3-XrF" eventType="touchUpInside" id="Q8t-E5-KCB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRs-VH-EhQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRs-VH-EhQ">
                                         <rect key="frame" x="0.0" y="150" width="374" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -148,7 +150,7 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhI-bx-yfG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhI-bx-yfG">
                                         <rect key="frame" x="0.0" y="204" width="374" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
@@ -167,20 +169,20 @@
                                         <rect key="frame" x="0.0" y="50" width="374" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO0-xJ-IC2">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIC-ZI-xlp">
-                                                <rect key="frame" x="332" y="0.0" width="42" height="20.5"/>
+                                                <rect key="frame" x="332.5" y="0.0" width="41.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXp-4k-bYr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXp-4k-bYr">
                                         <rect key="frame" x="0.0" y="90.5" width="374" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
@@ -196,10 +198,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qQz-OJ-95V">
-                                <rect key="frame" x="40" y="786" width="334" height="2"/>
+                                <rect key="frame" x="40" y="784" width="334" height="4"/>
                             </progressView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iwK-Hb-2yb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qQz-OJ-95V" secondAttribute="trailing" constant="20" id="5Dm-0K-9RH"/>
                             <constraint firstItem="xsx-bx-t6w" firstAttribute="centerX" secondItem="Od5-6a-dh2" secondAttribute="centerX" id="8Bk-VN-kXl"/>
@@ -219,7 +222,6 @@
                             <constraint firstItem="iwK-Hb-2yb" firstAttribute="trailing" secondItem="jh4-RR-vq4" secondAttribute="trailing" constant="20" id="wkU-1v-IRr"/>
                             <constraint firstItem="xsx-bx-t6w" firstAttribute="centerX" secondItem="Od5-6a-dh2" secondAttribute="centerX" id="yEo-Zl-ifW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="iwK-Hb-2yb"/>
                     </view>
                     <navigationItem key="navigationItem" id="35Z-yJ-AJe"/>
                     <connections>
@@ -253,7 +255,7 @@
         <!--Name-->
         <scene sceneID="76f-5U-xFz">
             <objects>
-                <viewController id="Pki-vi-SbK" customClass="NameViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pki-vi-SbK" customClass="NameViewController" customModule="What_Animal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jNp-ld-60U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,7 +274,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-Ui-XZF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-Ui-XZF">
                                         <rect key="frame" x="0.0" y="57" width="374" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
@@ -282,7 +284,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qrQ-AB-ORd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ojo-ru-WdX" firstAttribute="leading" secondItem="qrQ-AB-ORd" secondAttribute="leading" constant="20" id="1sh-Aw-3Ii"/>
                             <constraint firstItem="ojo-ru-WdX" firstAttribute="top" secondItem="qrQ-AB-ORd" secondAttribute="top" constant="20" id="2u7-i2-6AM"/>
@@ -292,7 +295,6 @@
                             <constraint firstItem="Abx-I8-x5P" firstAttribute="leading" secondItem="qrQ-AB-ORd" secondAttribute="leading" constant="20" id="o2R-Yj-HQv"/>
                             <constraint firstItem="Abx-I8-x5P" firstAttribute="centerX" secondItem="jNp-ld-60U" secondAttribute="centerX" id="vJD-Ro-NQx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qrQ-AB-ORd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Name" largeTitleDisplayMode="always" id="BNP-KW-nSx"/>
                     <connections>
@@ -306,7 +308,7 @@
         <!--Results-->
         <scene sceneID="BSd-X8-B4Q">
             <objects>
-                <viewController id="Ifa-ZU-qxo" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ifa-ZU-qxo" customClass="ResultsViewController" customModule="What_Animal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9lx-81-PT4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,14 +331,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5JH-RH-G2t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5JH-RH-G2t" firstAttribute="trailing" secondItem="99W-Mi-Hey" secondAttribute="trailing" constant="20" id="E4e-hb-qVF"/>
                             <constraint firstItem="99W-Mi-Hey" firstAttribute="leading" secondItem="5JH-RH-G2t" secondAttribute="leading" constant="20" id="P9K-TV-QgY"/>
                             <constraint firstItem="99W-Mi-Hey" firstAttribute="centerX" secondItem="9lx-81-PT4" secondAttribute="centerX" id="fJd-qX-Z6E"/>
                             <constraint firstItem="99W-Mi-Hey" firstAttribute="centerY" secondItem="9lx-81-PT4" secondAttribute="centerY" id="mHS-U1-yFh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5JH-RH-G2t"/>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="bER-Bp-jFq">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Qwi-sj-1Wt">
@@ -353,7 +355,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obx-9G-c0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="E8K-8f-Rmj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="138"/>
+            <point key="canvasLocation" x="2883" y="147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ita-7p-wND">
@@ -375,4 +377,9 @@
             <point key="canvasLocation" x="800.00000000000011" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

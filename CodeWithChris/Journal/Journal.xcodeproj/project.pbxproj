@@ -50,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6537583C24E4400A004929C4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				65BBEA2924E0132100DF3965 /* Main.storyboard */,
+				65BBEA2E24E0132300DF3965 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		65BBEA1724E0132100DF3965 = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +84,8 @@
 				65BBEA2524E0132100DF3965 /* SceneDelegate.swift */,
 				65BBEA3B24E0189200DF3965 /* Model */,
 				65BBEA3924E0187D00DF3965 /* View */,
+				6537583C24E4400A004929C4 /* Storyboard */,
 				65BBEA2C24E0132300DF3965 /* Assets.xcassets */,
-				65BBEA2924E0132100DF3965 /* Main.storyboard */,
-				65BBEA2E24E0132300DF3965 /* LaunchScreen.storyboard */,
 				65BBEA3124E0132300DF3965 /* Info.plist */,
 				65BBEA3724E017B000DF3965 /* GoogleService-Info.plist */,
 			);
